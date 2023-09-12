@@ -1,0 +1,12 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{entrti|capfirst}}
+{% endblock %}
+
+{% block body %}
+    <a  href="/wiki/{{ entrti }}/edit" role="button">Edit</a>    
+    {{title|safe}}
+
+    
+{% endblock %}

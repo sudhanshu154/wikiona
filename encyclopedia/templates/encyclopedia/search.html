@@ -1,0 +1,34 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+     {{entrti|capfirst}}
+{% endblock %}
+
+{% block body %}
+    <h1>Search Result for {{query}} :</h1>
+    <br>
+
+    {% if nomech %}
+        <ul>
+                {% for en in sub %}
+                    <li><a href="wiki/{{en}}">{{ en }}</a></li>
+                {% endfor %}
+            </ul>
+    
+    {% else %}
+        <span> This site can’t be reached </span> <br>
+        <br>
+        <h2>Try:</h2> <br>
+            <ul>
+               
+                    <li><a href="/">GO TO INTEX PAGE</a></li>
+                        <li>Checking the connection</li>
+                     <li>   Checking the proxy and the firewall </li>
+            </ul>
+    
+ERR_CONNECTION_REFUSED
+    
+        
+    {% endif %}
+
+{% endblock %}
